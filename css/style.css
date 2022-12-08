@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #2c3e50;
+  --secondaryColor: #fff;
+  --auxiliaryColor: #7ed6df;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* header begins here */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primaryColor);
+  padding: 5px 100px 5px 0;
+}
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #7ed6df;
+  width: 200px;
+  text-align: right;
+  padding-right: 10px;
+}
+.list {
+  display: flex;
+  gap: 20px;
+}
+.listItem {
+  padding: 0 5px;
+  list-style: none;
+  border-bottom: 2px solid var(--secondaryColor);
+}
+.link {
+  text-decoration: none;
+  color: var(--secondaryColor);
+  font-size: 18px;
+}
+/* header ends here */
+
+/* banner starts here */
+.hero-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 200px;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/ffb84525-0a95-4815-a92a-5c9f3ade809d/dbzgjiz-0e116c32-6c6a-4c26-85b0-d83d578c039d.png/v1/fill/w_1192,h_670,strp/overlap_police_by_senzune_dbzgjiz-pre.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.heading-container {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: 10px;
+  margin: 0 100px 10px 0;
+}
+.page-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+/* about me begins here */
+.page-section {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  margin-bottom: 30px;
+}
+.title {
+  text-align: right;
+  font-weight: bolder;
+  color: var(--primaryColor);
+  border-right: 3px solid var(--primaryColor);
+  padding: 0 10px;
+}
+.aboutMeText {
+  padding: 0 20px;
+  font-size: 18px;
+}
+/*portfolio container starts here*/
+.portfolio-container {
+  height: 800px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
+  gap: 10px;
+  grid-template-areas:
+    "markup markup"
+    "css javascript"
+    "api agile";
+}
+.markup {
+  grid-area: markup;
+  background-image: url("https://cf.ltkcdn.net/web-design/images/orig/204538-2261x1326-HTML.jpg");
+}
+.css {
+  grid-area: css;
+  background-image: url("https://wallup.net/wp-content/uploads/2017/11/17/227942-CSS-CSS3.jpg");
+}
+.javascript {
+  grid-area: javascript;
+  background-image: url("https://wallpaperbat.com/img/426798-its-almost-1000-days-are-you-using-arrow-functions.jpg");
+}
+.api {
+  grid-area: api;
+  background-image: url("https://prezentr.com/wp-content/uploads/2016/10/API-PowerPoint-Background.png");
+}
+.agile {
+  grid-area: agile;
+  background-image: url("https://media.istockphoto.com/photos/agile-concept-with-blurred-city-lights-picture-id1191801277?k=6&m=1191801277&s=612x612&w=0&h=lNKzVisMczHGXegkTI1Nu8Qp5WQ6avalcR3_z93Umfk=");
+}
+.flex-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid var(--auxiliaryColor);
+  cursor: pointer;
+}
+.flex-container:hover .overlay {
+  opacity: 0;
+}
+.heading {
+  color: var(--primaryColor);
+  background-color: var(--auxiliaryColor);
+  width: max-content;
+  height: max-content;
+  padding: 10px;
+  margin-bottom: 20px;
+  z-index: 3;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: 0.5s opacity ease-in-out;
+}
+/* contact section starts here */
+.contact-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social {
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-size: 18px;
+}
+.item {
+  border-bottom: 5px solid var(--primaryColor);
+  list-style: none;
+  padding: 0 5px;
+}
+@media only screen and (max-width: 652px) {
+  body {
+    background-color: whitesmoke;
+  }
+}
